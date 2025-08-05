@@ -7,6 +7,7 @@ let app = express();
  res.sendFile(absolutePath);
         });
 
+app.use('/public', express.static(__dirname+'/public'));
 
 
 
