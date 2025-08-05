@@ -1,6 +1,11 @@
 require('dotenv').config();
 let express = require('express');
 let app = express();
+ 
+  app.use((req,res,next) => {
+  console.log(`${req.method} ${req.path} - ${req.ip}`);
+  next();
+ });
 
 
  let absolutePath= __dirname+ '/views/index.html';
